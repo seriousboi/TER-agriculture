@@ -2,18 +2,25 @@
 
 
 class Instance():
-    def __init__(self,name,rest_duration,crop_species_amount,crop_families_amount,crop_species_list,plots_amount,plots_list):
+    def __init__(self,name,period_duration,planning_duration,rest_duration,fallow_duration,crop_species_amount,crop_families_amount,crop_species_list,plots_amount,plots_list,fertilizers_list):
         self.name = name
+        self.period_duration = period_duration
+        self.planning_duration = planning_duration
         self.rest_duration = rest_duration
+        self.fallow_duration = fallow_duration
         self.crop_species_amount = crop_species_amount
         self.crop_families_amount = crop_families_amount
         self.crop_species_list = crop_species_list
         self.plots_amount = plots_amount
         self.plots_list = plots_list
+        self.fertilizers_list = fertilizers_list
 
     def print(self):
         print("///////////// Instance "+self.name+" /////////////")
+        print("period_duration: "+str(self.period_duration)+" months")
+        print("planning_duration: "+str(self.planning_duration)+" periods")
         print("rest_duration: "+str(self.rest_duration))
+        print("fallow_duration: "+str(self.fallow_duration))
         print("crop_species_amount: "+str(self.crop_species_amount))
         print("crop_families_amount: "+str(self.crop_families_amount))
         print("plots_amount: "+str(self.plots_amount))
